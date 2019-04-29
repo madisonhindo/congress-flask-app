@@ -39,7 +39,7 @@ get_links(rep_list)
 
 newfile = open('rep_info_full.csv', 'w') 
 c = csv.writer(newfile)
-c.writerow(['name', ' state', ' district', ' office time', ' website', ' contact', ' party'])
+c.writerow(['name', 'state', 'district', 'office time', 'website', 'contact', 'party'])
 
 
 def scrape_members(links):
