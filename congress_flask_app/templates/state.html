@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+{{ the_title }}
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<div class="container" id="state">
+    <div class="row justify-content-center">
+        <div id="content">
+            <h1 class="text-center">{{ s['state'] }}</h1>
+            
+            <p class="lead"><strong>Total itemized contributions in the 2018 elections:</strong> {{ s[' total_itemized_contributions']}} </p>
+            <p class="lead">Itemized contributions includes PAC contributions to candidates, individual donations over $200 to candidates and parties, and Levin fund contributions to parties.</p>
+            <p class="lead"><strong>Total itemized contributions ranking:</strong> {{ s[' total_contributions_rank']}} out of 50 states </p>
+            <p class="lead"><strong>Top five industries of donors:</strong></p>
+                <ol class="lead">
+                    <li>{{ s[' top_industry']}}</li>
+                    <li>{{ s[' second_industry']}}</li>
+                    <li>{{ s[' third_industry']}}</li>
+                    <li>{{ s[' fourth_industry']}}</li>
+                    <li>{{ s[' fifth_industry']}}</li>
+                </ol>
+            <p class="lead"><strong>Representatives in {{ s['state'] }}:</p></strong>
+            {% for member in members %}
+            <ul class="lead">
+                <li><a href="{{ url_for('detail', num=member['id']) }}">{{member['name']}}</a></li>
+            </ul>
+            {% endfor %}
+            <p class="lead"><a href="{{ url_for('index') }}">Click here</a> to select a different state.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+		<p class="text-center">This project was created by Madison Hindo. View it it on GitHub.</p>
+</footer>
+
+{% endblock %}

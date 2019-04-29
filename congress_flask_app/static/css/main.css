@@ -1,0 +1,28 @@
+#state, #member, #search {
+    max-width: 600px;
+    background-color: #F4F4F9;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+
+body {
+    background-color: #586F7C;
+    margin: 0 auto;
+    }
+  
+#content {
+    margin: 0 3rem;
+    margin-bottom: 2rem;
+}
+
+
+footer {
+    background-color: #2F4550;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: #fff
+}

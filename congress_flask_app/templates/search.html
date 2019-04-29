@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}
+Search for Representatives
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+<div class="container mb-3" id="search">
+	<div class="row mb-3">
+		<div id="content">
+
+			<h1 class="mt-5">Search for U.S. Members of Congress</h1>
+
+			<p class="lead">Select each state to see a list of representatives.</p>
+
+			{{ wtf.quick_form(form) }}
+		</div>
+	</div>
+</div>
+<footer>
+		<p class="text-center">This project was created by Madison Hindo. View it it on GitHub.</p>
+</footer>
+
+
+{% endblock %}
