@@ -24,7 +24,9 @@
                     <li>{{ s[' fourth_industry']}}</li>
                     <li>{{ s[' fifth_industry']}}</li>
                 </ol>
+                
             <p class="lead"><strong>Representatives in {{ s['state'] }}:</p></strong>
+
             {% for member in members %}
             <ul class="lead">
                 <li><a href="{{ url_for('detail', num=member['id']) }}">{{member['name']}}</a></li>

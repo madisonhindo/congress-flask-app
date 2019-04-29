@@ -9,7 +9,7 @@ from wtforms.validators import Required
 app = Flask(__name__)
 
 # Flask-WTF requires an encryption key - the string can be anything
-app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
+app.config['SECRET_KEY'] = 'VguhZssWgM'
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
@@ -62,9 +62,7 @@ def detail(num):
         if member['id'] == num:
             member_dict = member
             break
-    # a little bonus function, imported
-    
-    return render_template('member.html', mem=member_dict, ord=ord, the_title=member_dict['name'])
+    return render_template('member.html', mem=member_dict, the_title=member_dict['name'])
 
 @app.route('/state/<state_id>')
 def state_page(state_id):
@@ -74,7 +72,7 @@ def state_page(state_id):
             members = select_where_state_is(state_id)
             break
             
-    return render_template('state.html', s=s, ord=ord, the_title=state_id, members=members)
+    return render_template('state.html', s=s, the_title=state_id, members=members)
 
 def select_where_state_is(state):
     selected_members = []

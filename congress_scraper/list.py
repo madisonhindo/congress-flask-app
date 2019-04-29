@@ -1,6 +1,5 @@
 import time
 import requests
-from selenium import webdriver
 from urllib.request import urlopen
 from functools import reduce
 from bs4 import BeautifulSoup
