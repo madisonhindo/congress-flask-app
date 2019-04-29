@@ -26,3 +26,12 @@ footer {
     margin-bottom: 2rem;
     color: #fff
 }
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+   color:#F4F4F9;
+}

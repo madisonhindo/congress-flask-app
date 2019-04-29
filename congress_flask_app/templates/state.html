@@ -2,7 +2,7 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}
-{{ the_title }}
+{{ the_title.capitalize() }}
 {% endblock %}
 
 
@@ -14,9 +14,10 @@
             <h1 class="text-center">{{ s['state'] }}</h1>
             
             <p class="lead"><strong>Total itemized contributions in the 2018 elections:</strong> {{ s[' total_itemized_contributions']}} </p>
-            <p class="lead">Itemized contributions includes PAC contributions to candidates, individual donations over $200 to candidates and parties, and Levin fund contributions to parties.</p>
-            <p class="lead"><strong>Total itemized contributions ranking:</strong> {{ s[' total_contributions_rank']}} out of 50 states </p>
-            <p class="lead"><strong>Top five industries of donors:</strong></p>
+            <p class="lead">Itemized contributions includes PAC contributions to candidates, individual donations over $200 to candidates and parties, and Levin fund contributions to parties in the state.</p>
+            <p class="lead"><strong>Contributions ranking:</strong> #{{ s[' total_contributions_rank']}} out of 50</p>
+            <p class="lead"> The contributions ranking lets you see how {{ s['state']}} compares to other states. A lower ranking implies more money was spent. </p>
+            <p class="lead"><strong>Top five donating professions/industries:</strong></p>
                 <ol class="lead">
                     <li>{{ s[' top_industry']}}</li>
                     <li>{{ s[' second_industry']}}</li>
@@ -38,7 +39,7 @@
 </div>
 
 <footer>
-		<p class="text-center">This project was created by Madison Hindo. View it it on GitHub.</p>
+    <p class="text-center">This project was created by Madison Hindo. View it it on <a href="https://github.com/madisonhindo/congress-flask-app">GitHub.</a></p>
 </footer>
 
 {% endblock %}
