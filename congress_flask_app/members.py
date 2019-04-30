@@ -17,7 +17,7 @@ members_list = convert_to_dict("flask_rep_info.csv")
 state_financial_list = convert_to_dict("state_financial_info.csv")
 
 class SearchForm(FlaskForm):
-    state_choice = SelectField('Select from this list')
+    state_choice = SelectField('Select from this list.')
     submit = SubmitField('Search')
 
 
