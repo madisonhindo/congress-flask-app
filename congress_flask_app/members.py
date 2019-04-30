@@ -7,6 +7,7 @@ from wtforms import SubmitField, SelectField
 from wtforms.validators import Required
 
 app = Flask(__name__)
+application = app 
 
 app.config['SECRET_KEY'] = 'VguhZssWgM'
 
