@@ -11,7 +11,7 @@
 <div class="container" id="state">
     <div class="row justify-content-center">
         <div id="content">
-            <h1 class="text-center">{{ s['state'] }}</h1>
+            <h1 class="text-center pt-3">{{ s['state'] }}</h1>
             
             <p class="lead"><strong>Total itemized contributions in the 2018 elections:</strong> {{ s[' total_itemized_contributions']}} </p>
             <p class="lead">Itemized contributions includes PAC contributions to candidates, individual donations over $200 to candidates and parties, and Levin fund contributions to parties in the state.</p>
@@ -33,7 +33,7 @@
                 <li><a href="{{ url_for('detail', num=member['id']) }}">{{member['name']}}</a></li>
             </ul>
             {% endfor %}
-            <p class="lead"><a href="{{ url_for('index') }}">Click here</a> to select a different state.</p>
+            <p class="lead"><a href="{{ url_for('index') }}">Select a different state.</a></p>
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@
 <div class="container" id="member">
     <div class="row justify-content-center">
         <div id="content">
-            <h1 class="text-center">{{ mem['name'] }}</h1>
+            <h1 class="text-center pt-3">{{ mem['name'] }}</h1>
                 
             <p class="lead">{{ mem['name'] }} represents District {{ mem[' district']}}.</p>
 
@@ -15,7 +15,7 @@
             <p><strong>Contact:</strong> {{ mem[' contact']}} </p>
             <p><strong>Website:</strong> <a href="{{ mem[' website']}}">{{ mem[' website']}}</a> </p>
 
-            <p><a href="{{ url_for('index') }}">Click here</a> to select a different state.</p>
+            <p><a href="{{ url_for('index') }}">Select a different state.</a></p>
         </div>
     </div>
 </div>

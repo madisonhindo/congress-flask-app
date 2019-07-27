@@ -36,7 +36,7 @@ def index():
 
     if request.method == "POST":
         state_choice = request.form.get("state_choice").lower()
-        return redirect( url_for('state_page', state_id=state_choice ) )
+        return redirect( url_for('state_page', state_id=state_choice.replace(' ', '+', 1) ) )
     return render_template('search.html', form=form)
 
 @app.route('/member/<num>')
@@ -49,6 +49,7 @@ def detail(num):
 
 @app.route('/state/<state_id>')
 def state_page(state_id):
+    state_id = state_id.replace('+', ' ', 1)
     for state in state_financial_list:
         if state['state'].lower() == state_id:
             s = state
